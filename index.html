@@ -17,7 +17,7 @@ description : I'm currently a student who is trying his best
         body
         {
             background: silver;
-            color: salmon;
+            color: rgb(250,200,200);
             font-family: 'Charmonman', cursive;
             word-spacing: 8px;
         }
@@ -68,12 +68,11 @@ description : I'm currently a student who is trying his best
             font-family: 'Charmonman', cursive;
             font-size: 30px;
             text-shadow: 5px 5px 5px black;
-            color: darkcyan;
+            color: cyan;
         }
         h2
         {
             text-align: center;
-            color: linear-gradient(-45deg,rgba(0,0,0,0.5),rgba(250,250,250,0.8),rgba(0,0,0,1),rgba(0,0,0,0.5));
             text-shadow: 2px 2px 0px black;
             margin: 0px;
             
@@ -90,7 +89,6 @@ description : I'm currently a student who is trying his best
             border-radius: 15px;
             padding: 10px;
             height: auto;
-            color: salmon;
             font-size: 20px;
             transition-duration: 2s;
         }
@@ -132,6 +130,7 @@ description : I'm currently a student who is trying his best
     {
         background: salmon;
         z-index: 7;
+        color: ;
     }
     #block2
     {
@@ -181,6 +180,7 @@ description : I'm currently a student who is trying his best
             right: 20px;
             color: white;
             opacity: 0.3;
+            z-index: 8;
         }
     i:hover
         {
@@ -200,8 +200,8 @@ description : I'm currently a student who is trying his best
   <source src="bg.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
- <iframe id="frame" src="music.mp3" allow='autoplay' style='display: none;'></iframe>
-    <!--<audio src="music.mp3" autoplay loop ></audio>-->
+ <iframe id="frame" allow='autoplay; loop;' style='display: none;'></iframe> 
+   <audio src="music.mp3" autoplay loop ></audio>
   <div id="main">
         <form action="#" id="form_for_two_name" onsubmit="flame(); blur_bgon(); return false;">
             <h2>First Name :</h2><br><input type="text" name="firstName" class="name" id="fname" required><br>
@@ -252,7 +252,7 @@ description : I'm currently a student who is trying his best
         size = sizef + sizes;  // length of names combined
          
          //output of names and length
-        document.getElementById("result").innerHTML = "first name <i style='color: darkcyan;'>" + fname + "</i> Second name <i style='color: darkcyan;'>" +  sname + "</i> " + sizef + sizes + size;
+        document.getElementById("result").innerHTML = "first name <b><i style='color: red;'>" + fname + "</i></b> Second name <b><i style='color: red;'>" +  sname + "</i></b> " + sizef + sizes + size;
          
         // mathching letters
         for(i=0;i<sizef;i++)
@@ -269,7 +269,7 @@ description : I'm currently a student who is trying his best
                         break;}
                     }
             }
-         document.getElementById("result2").innerHTML = "Matched Letter : <i style='color: darkcyan;'>" + text + "</i>";
+         document.getElementById("result2").innerHTML = "Matched Letter : <b><i style='color: red;'>" + text + "</i></b>";
          
          // flame algorithm
         for (i=0;i<5;i++)
@@ -402,19 +402,19 @@ description : I'm currently a student who is trying his best
                             } 
               }  
          if(k === 0) {
-         document.getElementById("result3").innerHTML = flame[k] + "--><b><i style='color: darkcyan;'>" + fname + "</i></b> and <b><i style='color: darkcyan;'>" + sname + "</i></b> are going to be very good<b> friends</b>.NO matter what they will help each other in every situation. The Friendhip between the two will exist forever.";
+         document.getElementById("result3").innerHTML = flame[k] + "--><b><i style='color: red;'>" + fname + "</i></b> and <b><i style='color: red;'>" + sname + "</i></b> are going to be very good<b style='color: red'> friends</b>.NO matter what they will help each other in every situation. The Friendhip between the two will exist forever.";
          }
          else if(k === 1) {
-         document.getElementById("result3").innerHTML = flame[k] + "--><b><i style='color: darkcyan;'>" + fname + "</i></b> and <b><i style='color: darkcyan;'>" + sname + "</i></b> are sure have been fallen in <b>love</b> and if not they will soon. They are going to live their live happily and will share their love with each other.Love between the two is unfathomable.";
+         document.getElementById("result3").innerHTML = flame[k] + "--><b><i style='color: red;'>" + fname + "</i></b> and <b><i style='color: red;'>" + sname + "</i></b> are sure have been fallen in <b style='color: red'>love</b> and if not they will soon. They are going to live their live happily and will share their love with each other.Love between the two is unfathomable.";
          }
          else if(k === 2) {
-         document.getElementById("result3").innerHTML = flame[k] + "--><b><i style='color: darkcyan;'>" + fname + "</i></b> and <b><i style='color: darkcyan;'>" + sname + "</i></b> are <b>atrracted</b> to each other and if not both, atlest one of them is for sure. This infatuation is good for them because during this period they might discover some of the most memorablempart of their life." ;
+         document.getElementById("result3").innerHTML = flame[k] + "--><b><i style='color: red;'>" + fname + "</i></b> and <b><i style='color: red;'>" + sname + "</i></b> are <b style='color: red'>atrracted</b> to each other and if not both, atlest one of them is for sure. This infatuation is good for them because during this period they might discover some of the most memorablempart of their life." ;
          }
          else if(k === 3) {
-         document.getElementById("result3").innerHTML = flame[k] + "--><b><i style='color: darkcyan;'>" + fname + "</i></b> and <b><i style='color: darkcyan;'>" + sname + "</i></b> are <b>married</b> to each other and if not soon they will be. Both know each other well but even great thing to know about is that your parents will help you to have your marriage arranged.nothing is better than an arranged marriage.";
+         document.getElementById("result3").innerHTML = flame[k] + "--><b><i style='color: red;'>" + fname + "</i></b> and <b><i style='color: red;'>" + sname + "</i></b> are <b style='color: red'>married</b> to each other and if not soon they will be. Both know each other well but even great thing to know about is that your parents will help you to have your marriage arranged.nothing is better than an arranged marriage.";
          }
          else if(k === 4) {
-         document.getElementById("result3").innerHTML = flame[k] + "--><b><i style='color: darkcyan;'>" + fname + "</i></b> and <b><i style='color: darkcyan;'>" + sname + "</i></b> Both of you are crazy and live your life according to your own rules and regulation and these rules and regulations will cause both of you to become <b>enemy</b>. Probabily both of you hate each other from the core of the heart. Interaction may cause each other's life to go miserable. Better stay away from each other.";
+         document.getElementById("result3").innerHTML = flame[k] + "--><b><i style='color: red;'>" + fname + "</i></b> and <b><i style='color: red;'>" + sname + "</i></b> Both of you are crazy and live your life according to your own rules and regulation and these rules and regulations will cause both of you to become <b style='color: red'>enemy</b>. Probabily both of you hate each other from the core of the heart. Interaction may cause each other's life to go miserable. Better stay away from each other.";
          }
          else {
          document.getElementById("result3").innerHTML = "there is some error try refreshing the the page.";
@@ -441,12 +441,12 @@ description : I'm currently a student who is trying his best
     
     // volume function .....................................
     function volumeclose() {
-        document.getElementById("volup").style.display = "none"; document.getElementById("frame").setAttribute("src", "no.mp3");
+        document.getElementById("volup").style.display = "none"; document.querySelector('audio').volume = 0;
         document.getElementById("voldo").style.display = "block";
     }
     function volumeon() {
         document.getElementById("voldo").style.display = "none";
-        document.getElementById("volup").style.display = "block";  document.getElementById("frame").setAttribute("src", "music.mp3");
+        document.getElementById("volup").style.display = "block";  document.querySelector('audio').volume = 1;
     }
         
             
