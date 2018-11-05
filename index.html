@@ -11,6 +11,7 @@ description : I'm currently a student who is trying his best
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width initial-scale=1 "/>
     <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body
@@ -32,14 +33,14 @@ description : I'm currently a student who is trying his best
         }
         #main
             {
-                margin: 10vh;
+                margin: auto;
                 min-height: 500px;
                 max-height: auto;
                 width: 400px;
-                background: linear-gradient(-45deg,rgba(0,0,0,0.1),rgba(250,250,250,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.1));
+                background: linear-gradient(-45deg,rgba(0,0,0,0.1),rgba(250,250,250,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.4));
                 padding: 20px;
-                border: 5px solid white;
                 border-radius:15px;
+                box-shadow: 10px 10px 30px black
             }
         #box
         {
@@ -74,7 +75,13 @@ description : I'm currently a student who is trying his best
             text-align: center;
             color: linear-gradient(-45deg,rgba(0,0,0,0.5),rgba(250,250,250,0.8),rgba(0,0,0,1),rgba(0,0,0,0.5));
             text-shadow: 2px 2px 0px black;
+            margin: 0px;
             
+        }
+        input
+        {
+            margin: auto;
+            display: block;
         }
         #resultt
         {
@@ -168,22 +175,38 @@ description : I'm currently a student who is trying his best
         {
             font-size: 30px;
         }
-        
+    #volup, #voldo
+        {
+            position: fixed;
+            right: 20px;
+            color: white;
+            opacity: 0.3;
+        }
+    i:hover
+        {
+            cursor: grab;
+        }
+    #voldo
+        {
+            display: none;
+        }
     </style>
 </head>
 <body>
+   <i id="volup" onclick="volumeclose()" style='font-size:54px' class='fas'>&#xf028;</i>
+   <i id="voldo" onclick="volumeon()" style='font-size:54px' class='fas'>&#xf6a9;</i>
     
  <video autoplay muted loop id="myVideo">
   <source src="bg.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
- <iframe src="music.mp3" allow='autoplay' style='display: none;'></iframe>
+ <iframe id="frame" src="music.mp3" allow='autoplay' style='display: none;'></iframe>
     <!--<audio src="music.mp3" autoplay loop ></audio>-->
   <div id="main">
         <form action="#" id="form_for_two_name" onsubmit="flame(); blur_bgon(); return false;">
-           First Name :<br><input type="text" name="firstName" class="name" id="fname" required><br>
+            <h2>First Name :</h2><br><input type="text" name="firstName" class="name" id="fname" required><br>
            
-           Second Name :<br><input type="text" class="name" id="sname" name="secondName" required ><br>
+            <h2>Second Name :</h2><br><input type="text" class="name" id="sname" name="secondName" required ><br>
            <div id="box">
                <h2>RESULT</h2>
               <input type="submit" id="button" ><br><br>
@@ -415,6 +438,16 @@ description : I'm currently a student who is trying his best
            document.getElementById("block6").style.display = "none";
            
        }
+    
+    // volume function .....................................
+    function volumeclose() {
+        document.getElementById("volup").style.display = "none"; document.getElementById("frame").setAttribute("src", "no.mp3");
+        document.getElementById("voldo").style.display = "block";
+    }
+    function volumeon() {
+        document.getElementById("voldo").style.display = "none";
+        document.getElementById("volup").style.display = "block";  document.getElementById("frame").setAttribute("src", "music.mp3");
+    }
         
             
 </script> 
