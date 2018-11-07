@@ -195,40 +195,42 @@ description : I'm currently a student who is trying his best
     </style>
 </head>
 <body>
-   <i id="volup" onclick="volumeclose()" style='font-size:54px' class='fas'>&#xf028;</i>
-   <i id="voldo" onclick="volumeon()" style='font-size:54px' class='fas'>&#xf6a9;</i>
-    
- <video autoplay muted loop id="myVideo">
-  <source src="bg.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
- <iframe src="Recording.m4a" allow='autoplay' style='display: none;'></iframe> 
-   <audio src="music.mp3" autoplay loop ></audio>
-  <div id="main">
+<!-- volume button --------------------------------------------------------------------------------------->
+    <i id="volup" onclick="volumeclose()" style='font-size:54px' class='fas'>&#xf028;</i>
+    <i id="voldo" onclick="volumeon()" style='font-size:54px' class='fas'>&#xf6a9;</i>
+ <!-- Background video --------------------------------------------------------------------------------->   
+    <video autoplay muted loop id="myVideo">
+      <source src="bg.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+<!-- code for audio -------------------------------------------------------------------------------------->
+    <iframe src="Recording.m4a" allow='autoplay' style='display: none;'></iframe> 
+    <audio src="music.mp3" autoplay loop ></audio>
+<!-- Main body ------------------------------------------------------------------------------------------->
+    <div id="main">
         <form action="#" id="form_for_two_name" onsubmit="flame(); blur_bgon(); return false;">
-            <h2>First Name :</h2><br><input type="text" name="firstName" class="name" id="fname" required><br>
-           
-            <h2>Second Name :</h2><br><input type="text" class="name" id="sname" name="secondName" required ><br>
-           <div id="box">
-               <h2>RESULT</h2>
-              <input type="submit" id="button" ><br><br>
-            </div>
-       </form>
+                <h2>First Name :</h2><br><input type="text" name="firstName" class="name" id="fname" required><br>
 
+                <h2>Second Name :</h2><br><input type="text" class="name" id="sname" name="secondName" required ><br>
+               <div id="box">
+                    <h2>RESULT</h2>
+                    <input type="submit" id="button" ><br><br>
+               </div>
+       </form>
+<!-- Final result -------------------------------------------------------------------------------------->
         <div id="resultt">
            <div id="result"></div><br>
            <div id="result2"></div><br>
            <div id="result3"></div>
-      </div>
-  </div>
+        </div>
+    </div>
   <!-- section for popup ------------------------------------------------------------------------------>
-  
-      <div id="block1" class="block"></div>
-      <div id="block2" class="block"></div>
-      <div id="block3" class="block"></div>
-      <div id="block4" class="block"></div>
-      <div id="block5" class="block"></div> 
-      <div id="block6" class="block"></div>   
+    <div id="block1" class="block"></div>
+    <div id="block2" class="block"></div>
+    <div id="block3" class="block"></div>
+    <div id="block4" class="block"></div>
+    <div id="block5" class="block"></div> 
+    <div id="block6" class="block"></div>   
   <!-- section for popup closed ---------------------------------------------------------------------->
    
 <script>
